@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Court Case Search</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #eef2f5;
+        }
+        .container {
+            margin-top: 60px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+<div class="container bg-white p-4 rounded shadow">
+    <h3 class="mb-4">Search Court Case</h3>
+    <form method="POST" action="/">
+        <div class="mb-3">
+            <label for="court" class="form-label">Select Court</label>
+            <select name="court" id="court" class="form-select" required>
+                <option value="">-- Select Court --</option>
+                <option value="delhi">Delhi High Court</option>
+                <option value="faridabad">Faridabad District Court</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="case_type" class="form-label">Case Type</label>
+            <input type="text" name="case_type" id="case_type" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="case_number" class="form-label">Case Number</label>
+            <input type="text" name="case_number" id="case_number" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="case_year" class="form-label">Filing Year</label>
+            <input type="text" name="case_year" id="case_year" class="form-control" required>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="/dashboard" class="btn btn-outline-secondary">View Dashboard</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
